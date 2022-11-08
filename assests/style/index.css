@@ -130,6 +130,14 @@ a {
         background-color:var(--app-orange);
        } */
     }
+@media  (max-width: 280px) {
+        .column{
+          width: 100%;
+        }  
+         .banner{
+          background-color:var(--app-orange);
+         } 
+      }
  
    
    
