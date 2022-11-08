@@ -1,0 +1,136 @@
+
+@import "./reset.css";
+
+:root {
+    --app-blue:#53add4;
+    --app-orange:#d47a53;
+    --app-green:#53d47a;
+    --app-purple:#7a53d4;
+
+
+}
+body {
+    background-color: #f1f2f3;
+}
+
+.container {
+    width: min(100% - 30px, 1280px);
+    margin-inline: auto;
+    
+    
+}
+
+/* 
+ using 'flex-wrap:wrap' will aloow your child element to wrp to additional
+lines when they are no longer fit on the initial line. the element(s) that dont fit will wrp to the bottom-left
+in the parent element
+ */
+.row {
+   
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    
+}
+
+.row{
+    margin-top: 80px;
+   
+}
+.column {
+    flex-grow: 1 ;
+    width: calc(25% - 15px);
+    /* height: 200px; */
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 0.1);
+}
+.column {
+    background-color: var(--app-blue);
+    line-height: 20px;
+    padding: 20px;
+}
+.two {
+    background-color: var(--app-orange);
+}
+.three{
+    background-color: var(--app-green);
+}
+.four {
+    background-color: var(--app-purple);
+}
+.content{
+    text-align: left;
+}
+.link{
+    text-align: center;
+    line-height: 30px;
+    width: 50%;
+    border-radius: 6px;
+    color: #fff;
+    background-color: bisque;
+    margin-top: 20px;
+    place-items: center;
+}
+a {
+    text-decoration: none;
+}
+.banner{
+    /* background-color: aquamarine; */
+    line-height: 200px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    background-color: #53add4;
+}
+
+
+
+/* ------------------------------- */
+/* ------media queries------------ */
+/* ------------------------------ */
+/* 1281px and down */
+@media (max-width: 1681px) {
+
+     .link {
+       font-size: 13px;}
+        .banner{
+        background-color: #53d47a;
+       }    
+}
+@media (max-width: 960px) {
+
+    .link {
+      font-size: 12px;
+    }   
+     .banner{
+        background-color:var(--app-orange);
+       } 
+}
+
+/* 768px and down */
+@media (max-width: 768px) {
+    .one, .two,.three, .four {
+        width: calc(50% - 10px);}
+     .link {
+       font-size: 10px;
+     }   
+      .banner{
+        background-color:var(--app-purple);
+       } 
+}
+
+/* 480px and down */
+@media  (max-width: 480px) {
+      .column{
+        width: 100%;
+      }  
+      /* .banner{
+        background-color:var(--app-orange);
+       } */
+    }
+ 
+   
+   
+
