@@ -118,7 +118,7 @@ a {
 
 /* 768px and down */
 @media (max-width: 768px) {
-    .one, .two,.three, .four {
+   .column {
         width: calc(50% - 10px);}
      .link {
        font-size: 10px;
@@ -144,6 +144,15 @@ a {
        } */
     }
 @media  (max-width: 280px) {
+        .column{
+          width: 100%;
+        }  
+         .banner{
+          background-color:var(--app-orange);
+          color: aliceblue;
+         } 
+      }
+      @media  (max-width: 150px) {
         .column{
           width: 100%;
         }  
